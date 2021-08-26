@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.WebApi", "Pokemon.WebApi\Pokemon.WebApi.csproj", "{D9F178F1-4217-424B-A895-DAF0F8C934CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Service layer", "01. Service layer", "{A5B7D906-A30C-4CFB-A5D8-31D5AF92C8A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Business layer", "02. Business layer", "{45DC8BCF-31CB-4615-B101-C24470A58E15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Data layer", "03. Data layer", "{D550A39D-0DB8-4794-97B3-BE558E51ECC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Business", "Pokemon.Business\Pokemon.Business.csproj", "{BB210796-2F65-4F41-BECB-77C8F5594C46}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Business.Interfaces", "Pokemon.Business.Interfaces\Pokemon.Business.Interfaces.csproj", "{F191BB9D-6293-4E71-9D1E-2849D718C781}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Data.Interfaces", "Pokemon.Data.Interfaces\Pokemon.Data.Interfaces.csproj", "{1CC88A76-A7D9-4268-978B-A1E650E8F8D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Data.EntityFramework", "Pokemon.Data.EntityFramework\Pokemon.Data.EntityFramework.csproj", "{3E57B951-7C32-4CEA-B29B-9C2827C40E9B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Business.DependencyInjection", "Pokemon.Business.DependencyInjection\Pokemon.Business.DependencyInjection.csproj", "{5DCB3306-FA91-4D23-B4EA-505B80B5BFF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Data.DependencyInjection", "Pokemon.Data.DependencyInjection\Pokemon.Data.DependencyInjection.csproj", "{16C70D8B-AC26-45AA-BED7-3808C0DB5E02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Data.PokeApi", "Pokemon.Data.PokeApi\Pokemon.Data.PokeApi.csproj", "{881C9DE4-A4CA-47B8-876E-AE4062E493D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Business.Test", "Pokemon.Business.Test\Pokemon.Business.Test.csproj", "{A720C221-DB2A-4830-8EF8-45277EE50C90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9F178F1-4217-424B-A895-DAF0F8C934CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F178F1-4217-424B-A895-DAF0F8C934CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F178F1-4217-424B-A895-DAF0F8C934CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F178F1-4217-424B-A895-DAF0F8C934CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB210796-2F65-4F41-BECB-77C8F5594C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB210796-2F65-4F41-BECB-77C8F5594C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB210796-2F65-4F41-BECB-77C8F5594C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB210796-2F65-4F41-BECB-77C8F5594C46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F191BB9D-6293-4E71-9D1E-2849D718C781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F191BB9D-6293-4E71-9D1E-2849D718C781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F191BB9D-6293-4E71-9D1E-2849D718C781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F191BB9D-6293-4E71-9D1E-2849D718C781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CC88A76-A7D9-4268-978B-A1E650E8F8D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CC88A76-A7D9-4268-978B-A1E650E8F8D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CC88A76-A7D9-4268-978B-A1E650E8F8D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CC88A76-A7D9-4268-978B-A1E650E8F8D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E57B951-7C32-4CEA-B29B-9C2827C40E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E57B951-7C32-4CEA-B29B-9C2827C40E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E57B951-7C32-4CEA-B29B-9C2827C40E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E57B951-7C32-4CEA-B29B-9C2827C40E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DCB3306-FA91-4D23-B4EA-505B80B5BFF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DCB3306-FA91-4D23-B4EA-505B80B5BFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DCB3306-FA91-4D23-B4EA-505B80B5BFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DCB3306-FA91-4D23-B4EA-505B80B5BFF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16C70D8B-AC26-45AA-BED7-3808C0DB5E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C70D8B-AC26-45AA-BED7-3808C0DB5E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C70D8B-AC26-45AA-BED7-3808C0DB5E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16C70D8B-AC26-45AA-BED7-3808C0DB5E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{881C9DE4-A4CA-47B8-876E-AE4062E493D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{881C9DE4-A4CA-47B8-876E-AE4062E493D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{881C9DE4-A4CA-47B8-876E-AE4062E493D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{881C9DE4-A4CA-47B8-876E-AE4062E493D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A720C221-DB2A-4830-8EF8-45277EE50C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A720C221-DB2A-4830-8EF8-45277EE50C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A720C221-DB2A-4830-8EF8-45277EE50C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A720C221-DB2A-4830-8EF8-45277EE50C90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D9F178F1-4217-424B-A895-DAF0F8C934CF} = {A5B7D906-A30C-4CFB-A5D8-31D5AF92C8A2}
+		{BB210796-2F65-4F41-BECB-77C8F5594C46} = {45DC8BCF-31CB-4615-B101-C24470A58E15}
+		{F191BB9D-6293-4E71-9D1E-2849D718C781} = {45DC8BCF-31CB-4615-B101-C24470A58E15}
+		{1CC88A76-A7D9-4268-978B-A1E650E8F8D1} = {D550A39D-0DB8-4794-97B3-BE558E51ECC1}
+		{3E57B951-7C32-4CEA-B29B-9C2827C40E9B} = {D550A39D-0DB8-4794-97B3-BE558E51ECC1}
+		{5DCB3306-FA91-4D23-B4EA-505B80B5BFF9} = {45DC8BCF-31CB-4615-B101-C24470A58E15}
+		{16C70D8B-AC26-45AA-BED7-3808C0DB5E02} = {D550A39D-0DB8-4794-97B3-BE558E51ECC1}
+		{881C9DE4-A4CA-47B8-876E-AE4062E493D5} = {D550A39D-0DB8-4794-97B3-BE558E51ECC1}
+		{A720C221-DB2A-4830-8EF8-45277EE50C90} = {45DC8BCF-31CB-4615-B101-C24470A58E15}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91E8F775-3FD8-4F85-8EFD-498CD9DDBE8B}
+	EndGlobalSection
+EndGlobal
