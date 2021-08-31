@@ -5,8 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Pokemon.Data.EntityFramework;
 using Pokemon.Data.Interfaces;
 using Pokemon.Data.Interfaces.DerivedModels;
-using Pokemon.Data.PokeApi;
-using Pokemon.Data.PokeApi.Profiles;
 using RestSharp;
 
 namespace Pokemon.Data.DependencyInjection
@@ -26,10 +24,6 @@ namespace Pokemon.Data.DependencyInjection
                     .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)
                 );
             //services.AddTransient(typeof(IRepository<PokemonFullDetails>), typeof(PokemonFullDetailsApiRepository));
-            services.AddTransient(typeof(IRepository<PokemonFullDetails>), typeof(PokemonFullDetailsEFRepository));
-            services.AddTransient(typeof(IRepository<>), typeof(EntityFrameworkRepository<>));
-            services.AddTransient<IRestClient, RestClient>();
-            services.AddAutoMapper(typeof(PokeApiPokemonProfile).Assembly);
 
         }
     }

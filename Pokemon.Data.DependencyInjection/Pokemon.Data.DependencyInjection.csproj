@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pokemon.Data.EntityFramework\Pokemon.Data.EntityFramework.csproj" />
-    <ProjectReference Include="..\Pokemon.Data.PokeApi\Pokemon.Data.PokeApi.csproj" />
   </ItemGroup>
 
 </Project>

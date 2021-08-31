@@ -23,9 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Business.Dependency
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Data.DependencyInjection", "Pokemon.Data.DependencyInjection\Pokemon.Data.DependencyInjection.csproj", "{16C70D8B-AC26-45AA-BED7-3808C0DB5E02}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Data.PokeApi", "Pokemon.Data.PokeApi\Pokemon.Data.PokeApi.csproj", "{881C9DE4-A4CA-47B8-876E-AE4062E493D5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Business.Test", "Pokemon.Business.Test\Pokemon.Business.Test.csproj", "{A720C221-DB2A-4830-8EF8-45277EE50C90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Business.Test", "Pokemon.Business.Test\Pokemon.Business.Test.csproj", "{A720C221-DB2A-4830-8EF8-45277EE50C90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,10 +59,6 @@ Global
 		{16C70D8B-AC26-45AA-BED7-3808C0DB5E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16C70D8B-AC26-45AA-BED7-3808C0DB5E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16C70D8B-AC26-45AA-BED7-3808C0DB5E02}.Release|Any CPU.Build.0 = Release|Any CPU
-		{881C9DE4-A4CA-47B8-876E-AE4062E493D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{881C9DE4-A4CA-47B8-876E-AE4062E493D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{881C9DE4-A4CA-47B8-876E-AE4062E493D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{881C9DE4-A4CA-47B8-876E-AE4062E493D5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A720C221-DB2A-4830-8EF8-45277EE50C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A720C221-DB2A-4830-8EF8-45277EE50C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A720C221-DB2A-4830-8EF8-45277EE50C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -81,7 +75,6 @@ Global
 		{3E57B951-7C32-4CEA-B29B-9C2827C40E9B} = {D550A39D-0DB8-4794-97B3-BE558E51ECC1}
 		{5DCB3306-FA91-4D23-B4EA-505B80B5BFF9} = {45DC8BCF-31CB-4615-B101-C24470A58E15}
 		{16C70D8B-AC26-45AA-BED7-3808C0DB5E02} = {D550A39D-0DB8-4794-97B3-BE558E51ECC1}
-		{881C9DE4-A4CA-47B8-876E-AE4062E493D5} = {D550A39D-0DB8-4794-97B3-BE558E51ECC1}
 		{A720C221-DB2A-4830-8EF8-45277EE50C90} = {45DC8BCF-31CB-4615-B101-C24470A58E15}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

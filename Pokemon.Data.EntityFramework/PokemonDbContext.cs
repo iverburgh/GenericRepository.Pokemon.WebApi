@@ -18,7 +18,12 @@ namespace Pokemon.Data.EntityFramework
             Database.EnsureCreated();
         }
 
-        public DbSet<SourcePokemon> Pokemon { get; set; }
+        public DbSet<SourceAbility> SourceAbilities { get; set; }
+        public DbSet<SourceFamily> SourceFamilies { get; set; }
+        public DbSet<SourcePokemon> SourcePokemon { get; set; }
+        public DbSet<SourcePokemonAbility> SourcePokemonAbilities { get; set; }
+        public DbSet<SourcePokemonEggGroup> SourcePokemonEggGroups { get; set; }
+        public DbSet<SourcePokemonType> SourcePokemonTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

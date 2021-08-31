@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Pokemon.Business.Services;
 using Pokemon.Data.Interfaces.DatabaseEntities;
 
 namespace Pokemon.Business
@@ -15,13 +16,13 @@ namespace Pokemon.Business
     {
         private readonly ILogger<PokemonBl> _logger;
         private readonly IMapper _mapper;
-        private readonly IRepository<PokemonFullDetails> _pokemonFullDetailsRepository;
+        private readonly IPokemonFullDetailsService _pokemonFullDetailsService;
 
-        public PokemonBl(ILogger<PokemonBl> logger, IMapper mapper, IRepository<PokemonFullDetails> pokemonFullDetailsRepository)
+        public PokemonBl(ILogger<PokemonBl> logger, IMapper mapper, IPokemonFullDetailsService pokemonFullDetailsService)
         {
             _logger = logger;
             _mapper = mapper;
-            _pokemonFullDetailsRepository = pokemonFullDetailsRepository;
+            _pokemonFullDetailsService = pokemonFullDetailsService;
         }
 
         public async Task<bool> CreatePokemonAsync(Interfaces.Pokemon pokemon)
@@ -36,7 +37,7 @@ namespace Pokemon.Business
             try
             {
                 var pokemonFullDetails =
-                    await _pokemonFullDetailsRepository.GetSingleByExpressionAsync(p => p.Number == number);
+                    await _pokemonFullDetailsService.GetPokemonFullDetailsByNumberAsync(number);
                 pokemon = _mapper.Map<Interfaces.Pokemon>(pokemonFullDetails);
             }
             catch (Exception exception)
@@ -55,7 +56,7 @@ namespace Pokemon.Business
             List<Interfaces.Pokemon> pokemonList = null;
             try
             {
-                var pokemonFullDetailsList = _pokemonFullDetailsRepository.GetAll();
+                var pokemonFullDetailsList = await _pokemonFullDetailsService.GetAllPokemonFullDetailsAsync();
                 pokemonList = _mapper.Map<List<Interfaces.Pokemon>>(pokemonFullDetailsList);
             }
             catch (Exception exception)

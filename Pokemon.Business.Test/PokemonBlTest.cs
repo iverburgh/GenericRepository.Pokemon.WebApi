@@ -7,6 +7,7 @@ using Castle.DynamicProxy.Generators.Emitters.SimpleAST;
 using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using Moq;
+using Pokemon.Business.Services;
 using Pokemon.Data.Interfaces;
 using Pokemon.Data.Interfaces.DerivedModels;
 using Xunit;
@@ -18,15 +19,15 @@ namespace Pokemon.Business.Test
         private PokemonBl _pokemonBl;
         private Mock<ILogger<PokemonBl>> _loggerMock;
         private Mock<IMapper> _mapperMock;
-        private Mock<IRepository<PokemonFullDetails>> _pokemonFullDetailsRepositoryMock;
+        private Mock<IPokemonFullDetailsService> _pokemonFullDetailsServiceMock;
 
         public PokemonBlTest()
         {
             _loggerMock = new Mock<ILogger<PokemonBl>>();
             _mapperMock = new Mock<IMapper>();
-            _pokemonFullDetailsRepositoryMock = new Mock<IRepository<PokemonFullDetails>>();
+            _pokemonFullDetailsServiceMock = new Mock<IPokemonFullDetailsService>();
             _pokemonBl = new PokemonBl(_loggerMock.Object, _mapperMock.Object,
-                _pokemonFullDetailsRepositoryMock.Object);
+                _pokemonFullDetailsServiceMock.Object);
         }
 
         [Fact]
@@ -44,8 +45,8 @@ namespace Pokemon.Business.Test
                 Number = 1,
                 Name = "testpokemon"
             };
-            _pokemonFullDetailsRepositoryMock.Setup(pflr =>
-                    pflr.GetSingleByExpressionAsync(It.IsAny<Expression<Func<PokemonFullDetails, bool>>>()))
+            _pokemonFullDetailsServiceMock.Setup(pflr =>
+                    pflr.GetPokemonFullDetailsByNumberAsync(It.IsAny<int>()))
                     .ReturnsAsync(pokemonFullDetails);
             _mapperMock.Setup(mapper => mapper.Map<Interfaces.Pokemon>(It.IsAny<PokemonFullDetails>()))
                 .Callback<object>(pokemonFullDetailsParam => pokemonFullDetailsParam.Should().BeEquivalentTo(pokemonFullDetails))
@@ -86,8 +87,8 @@ namespace Pokemon.Business.Test
                     Name = "Testpokemon 2"
                 }
             };
-            _pokemonFullDetailsRepositoryMock.Setup(pflr =>
-                    pflr.GetAll()).Returns(pokemonFullDetailsList);
+            _pokemonFullDetailsServiceMock.Setup(pflr =>
+                    pflr.GetAllPokemonFullDetailsAsync()).ReturnsAsync(pokemonFullDetailsList);
             _mapperMock.Setup(mapper => mapper.Map<List<Interfaces.Pokemon>>(It.IsAny<IEnumerable<PokemonFullDetails>>()))
                 .Callback<object>(pokemonFullDetailsListParam => pokemonFullDetailsListParam.Should().BeEquivalentTo(pokemonFullDetailsList))
                 .Returns(pokemonList);

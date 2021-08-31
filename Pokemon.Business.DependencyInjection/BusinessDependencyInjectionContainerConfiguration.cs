@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Pokemon.Business.Profiles;
 using System;
 using Pokemon.Business.Interfaces;
+using Pokemon.Business.Services;
 using Pokemon.Data.DependencyInjection;
 
 namespace Pokemon.Business.DependencyInjection
@@ -13,6 +14,7 @@ namespace Pokemon.Business.DependencyInjection
         {
             services.AddAutoMapper(typeof(PokemonProfile).Assembly);
             services.AddTransient<IPokemonBl, PokemonBl>();
+            services.AddTransient<IPokemonFullDetailsService, PokemonFullDetailsService>();
             services.ConfigureDataDependencyInjectionContainer(configuration);
         }
 
